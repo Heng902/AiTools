@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.fzTiny {
+  font-size: 12px;
+}
+
+.fzSmall {
+  font-size: 14px;
+}
+
+.fzBody {
+  font-size: 16px;
+}
+
+.fzH06 {
+  font-size: 20px;
+}
+
+.fzH05 {
+  font-size: 24px;
+}
+
+.fzH04 {
+  font-size: 28px;
+}
+
+.fzH03 {
+  font-size: 32px;
+}
+
+.fzH02 {
+  font-size: 40px;
+}
+
+.fzH01 {
+  font-size: 48px;
+}
+
+.fzD03 {
+  font-size: 80px;
+}
+
+.fzD02 {
+  font-size: 120px;
+}
+
+.fzD01 {
+  font-size: 160px;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.m0A {
+  margin: 0 auto;
+}
+
+.df {
+  display: flex;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020202;
+  color: #FFFFFF;
+  font-family: "Noto Sans TC";
+  line-height: 1.2;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+a:visited {
+  color: #FFFFFF;
+}
+
+.navBar {
+  padding: 20px 0 20px 0;
+  width: 92%;
+  border-bottom: 1px solid #FFFFFF;
+  justify-content: space-between;
+}
+.navBar .logo {
+  height: 40px;
+}
+.navBar .closeIcon {
+  display: block;
+  margin-right: 14px;
+}
+
+.footer {
+  max-width: 1296px;
+}
+.footer .bottomBar {
+  justify-content: space-between;
+  padding: 192px 0 192px 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+.footer .bottomBar img {
+  width: 244px;
+  height: 42px;
+}
+.footer .wrapper {
+  margin: 36px 0 32px 0;
+  position: relative;
+}
+.footer .wrapper h4 {
+  padding-right: 98px;
+}
+.footer .wrapper ul {
+  width: 254px;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .navBar {
+    padding: 28px 0 28px 0;
+  }
+  .navBar .logo {
+    height: 24px;
+  }
+  .footer .wrapper {
+    flex-direction: column;
+    padding-left: 12px;
+  }
+  .footer .wrapper h4 {
+    padding-bottom: 36px;
+  }
+}/*# sourceMappingURL=Menu.css.map */

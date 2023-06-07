@@ -1,0 +1,704 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+//顏色
+$B100: #020202;
+$B80: #525252;
+$B60: #919191;
+$B40: #D1D1D1;
+$B20: #F2F2F2;
+$B0: #FFFFFF;
+$primary: #F18724;
+$surface: #F2EFE7;
+//標準寬度
+$Width: 1296px;
+//字體大小
+.fzTiny{
+    font-size: 12px;
+}
+.fzSmall{
+    font-size: 14px;
+}
+.fzBody{
+    font-size: 16px;
+}
+.fzH06{
+    font-size: 20px;
+}
+.fzH05{
+    font-size: 24px;
+}
+.fzH04{
+    font-size: 28px;
+}
+.fzH03{
+    font-size: 32px;
+}
+.fzH02{
+    font-size: 40px;
+}
+.fzH01{
+    font-size: 48px;
+}
+.fzD03{
+    font-size: 80px;
+}
+.fzD02{
+    font-size: 120px;
+}
+.fzD01{
+    font-size: 160px;
+}
+//字體粗細
+.bold{
+    font-weight: 900;
+}
+.regular{
+    font-weight: 400;
+}
+//容器置中
+.m0A{
+    margin: 0 auto;
+}
+//FLEX
+.df{
+    display: flex;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $B100;
+    color: $B0;
+    font-family: 'Noto Sans TC';
+    line-height: 1.2;
+
+}
+a{
+    color: $B0;
+    text-decoration: none;
+    &:visited{
+        color: $B0;
+    }
+}
+
+.navBar{
+    padding: 20px 0 20px 0;
+    max-width: $Width;
+    border-bottom: 1px solid $B0;
+    justify-content: space-between;
+    .logo{
+        height: 40px;
+    }
+    ul{
+        justify-content: end;
+        align-items: center;
+        li{
+            padding-left: 20px;
+        }
+    }
+    .menuIcon{
+        display: none;
+    }
+}
+.header{
+    max-width: $Width;
+    padding: 40px 0 0 0;
+    .startBtn{
+        padding: 60px 0 120px 0;
+        a{
+            border: 1px solid $B0;
+            border-radius: 12px;
+            padding: 20px 42px 20px 42px;
+        }
+    }
+    .arrowContainer{
+        text-align: end;
+        overflow: hidden;
+    }
+}
+.bodyInfo{
+    max-width: $Width;
+    .infoText{
+        flex-wrap: wrap;
+        padding-top: 164px;
+        h2:nth-child(1){
+            width: 414px;
+        }
+        h2:nth-child(2){
+            width: 856px;
+        }
+    }
+    .infoCard{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 78px;
+        li{
+            width: 416px;
+            border: 1px solid $B80;
+            border-radius: 18px;
+            padding: 86px 54px 78px 40px;
+            cursor: pointer;
+            h3{
+                padding: 24px 0 24px 0;
+            }
+        }
+    }
+}
+.workTogether{
+    max-width: $Width;
+    padding-top: 162px;
+    h3{
+        padding-bottom: 82px;
+    }
+    .logoWrapper{
+        position: relative;
+        ul{
+            padding-bottom: 24px;
+            overflow: hidden;
+            li{
+                flex-shrink: 0;
+                img{
+                    width: 160px;
+                    height: 40px;
+                }
+            }
+            &:nth-child(2){
+                justify-content: space-evenly;
+            }
+        }
+        .logoFilterLeft{
+            background-image: linear-gradient(to right, $B100, transparent);
+        }
+        .logoFilterRight{
+            background-image: linear-gradient(to left, $B100, transparent);
+            right: 0;
+        }
+        .logoFilterRight, .logoFilterLeft{
+            width: 32%;
+            height: 100%;
+            background-size: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+    }
+    .WTcard{
+        padding-top: 132px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            width: 416px;
+            height: 400px;
+            padding: 40px 50px 40px 40px;
+            position: relative;
+            background-color: #1b1b1b;
+            color: $B20;
+            border-radius: 20px;
+            line-height: 1.5;
+            .evaluate{
+                padding-bottom: 22px;
+            }
+            .user{
+                display: flex;
+                position: absolute;
+                bottom: 42px;
+                .userInfo{
+                    padding-left: 12px;
+                }
+            }
+        }
+    }
+    //w1200才會出現的按鈕
+    .cardBtn{
+        display: none;
+        justify-content: center;
+        padding-top: 24px;
+        li{
+            margin: 0 4px 0 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            background-color: $B80;
+            cursor: pointer;
+            color: transparent;
+        }
+        //被點擊的按鈕
+        .clicked{
+            background-color: $B0;
+                width: 13px;
+                height: 13px;
+        }
+    }
+
+}
+.productContainer{
+    max-width: 100%;
+    margin-top: 158px;
+    background-color: $B0;
+    color: $B100;
+    border-radius: 140px;
+    h2{
+        padding: 172px 0 80px 0;
+        text-align: center;
+    }
+    .search{
+        max-width: $Width;
+        background-color: $B20;
+        border-radius: 10px;
+        padding: 20px 0 20px 43px;
+        display: flex;
+        input{
+            width: 90%;
+            padding-left: 15.5px;
+            outline: none;
+            border: none;
+            background-color: $B20;
+        }
+    }
+    .menu{
+        max-width: $Width;
+        padding-top: 24px;
+        justify-content: space-between;
+        align-items: center;
+        .filterContainer{
+            position: relative;
+            height: 62px;
+            .filter{
+                flex-grow: 1;
+                padding: 20px 32px 20px 40px;
+                border: 1px solid $B40;
+                border-radius: 16px;
+                cursor: pointer;
+                h4{
+                    margin-right: 6px;
+                }
+            }
+            //filter打開時
+            .filterOpen{
+                border: 1px solid $B100;
+            }
+            .filterMenu{
+                display: none;
+                width: 230px;
+                padding-bottom: 10px;
+                position: absolute;
+                top: 68px;
+                box-shadow: 1px 2px 10px -1px $B80;
+                border-radius: 14px;
+                background-color: $B0;
+                outline: none;
+                z-index: 1;
+                h5{
+                    padding: 16px 0 10px 36px;
+                    font-weight: 700;
+                    color: $B60;
+                    &:nth-of-type(2){
+                        padding-top: 6px;
+                    }
+                }
+                ul{
+                    li{
+                        padding: 5px 30px 5px 36px;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        &:hover{
+                            background-color: $B40;
+                        }
+                    }
+                }
+                .whiteLine{
+                    width: 160px;
+                    height: 2px;
+                    background-color: $B20;
+                    margin: 8px auto 10px auto;
+                }
+            }
+        }
+        .typeMenu{
+            li{
+                padding: 8px 16px 8px 16px;
+                color: $B60;
+                cursor: pointer;
+                user-select: none;
+            }
+            //菜單欄裡被選擇的選項
+            .selected{
+                background-color: $B20;
+                color: $B100;
+                font-weight: 700;
+                border-radius: 14px;
+            }
+        }
+        .orderContainer{
+            height: 62px;
+            .order{
+                justify-content: center;
+                border: 1px solid $B40;
+                border-radius: 10px;
+                padding: 20px 36px 20px 40px;
+                cursor: pointer;
+                h4{
+                    padding-right: 14px;
+                }
+            }
+            .orderMenu{
+                display: none;
+                width: 156px;
+                margin: 6px 0 0 16px;
+                padding: 10px 0 10px 0;
+                box-shadow: 1px 2px 10px -1px $B80;
+                border-radius: 14px;
+                position: relative;
+                background-color: $B0;
+                z-index: 1;
+                h5{
+                    padding: 8px 14px 8px 14px;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover{
+                        color: $B80;
+                    }
+                }
+            }
+        }
+    }
+    .product{
+        max-width: $Width;
+        padding-top: 40px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            position: relative;
+            width: 416px;
+            height: 484px;
+            margin-bottom: 24px;
+            border: 1px solid $B20;
+            border-radius: 18px 18px 18px 18px;
+            line-height: 1.5;
+            &:hover{
+                .imgContainer{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            a{
+                color: $B100;
+            }
+        }
+        .positionContainer{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    // .product>li>a
+    .imgContainer{
+        overflow: hidden;
+        border-radius: 18px 18px 0 0;
+        img{
+            transition: all 0.3s;
+        }
+    }
+    .text{
+        padding: 20px 32px 20px 32px;
+        h4{
+            padding-bottom: 14px;
+        }
+    }
+    .info{
+        padding: 18px 32px 18px 32px;
+        border: 1px solid $B20;
+        display: flex;
+        justify-content: space-between;
+    }
+    .type{
+        padding: 18px 32px 18px 32px;
+        border-radius: 0 0 18px 18px;
+        border: 1px solid $B20;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pageBtn{
+        max-width: $Width;
+        justify-content: end;
+        padding: 16px 0 162px 0;
+        li{
+            width: 48px;
+            height: 48px;
+            padding: 14px 19px 14px 19px;
+            cursor: pointer;
+        }
+        .selected{
+            background-color: $B100;
+            color: $B0;
+            border-radius: 14px;
+        }
+    }
+}
+.toStart{
+    max-width:  $Width;
+    padding-top: 158px;
+    h3{
+        text-align: center;
+    }
+    .startBtn{
+        padding: 60px 0 120px 0;
+        a{
+            width: 186px;
+            border: 1px solid $B0;
+            border-radius: 12px;
+            padding: 20px 0 20px 42px;
+        }
+    }
+}
+.footer{
+    max-width: $Width;
+    .bottomBar{
+        justify-content: space-between;
+        padding: 78px 0 78px 0;
+        border-top: 1px solid $B0;
+        border-bottom: 1px solid $B0;
+        img{
+            width: 244px;
+            height: 42px;
+        }
+    }
+    .wrapper{
+        margin: 36px 0 32px 0;
+        position: relative;
+        h4{
+            padding-right: 98px;
+        }
+        ul{
+            width: 254px;
+            justify-content: space-between;
+        }
+        .toTop{
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            h5{
+                padding-right: 12px;
+            }
+        }
+    }
+}
+
+//1200
+@media (max-width: 1200px) {
+    .navBar{
+        width: 92%;
+        ul{
+            display: none;
+        }
+        .menuIcon{
+            display: block;
+            img{
+                margin-right: 14px;
+            }
+        }
+    }
+    .header{
+        padding: 40px 16px 0 16px;
+        h1{
+            font-size: 48px;
+        }
+        .arrowContainer{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 117px;
+            }
+        }
+    }
+    .bodyInfo{
+        padding: 0 16px 0 16px;
+        .infoText{
+            h2{
+                padding-bottom: 26px;
+                &:nth-child(1){
+                    font-size: 20px;
+                }
+                &:nth-child(2){
+                    font-size: 32px;
+                }
+            }
+        }
+        .infoCard{
+            justify-content: center;
+            li{
+                margin: 10px;
+            }
+        }
+        .workTogether{
+            .WTcard{
+                justify-content: start;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                li{
+                    width: 351px;
+                    flex-shrink: 0;
+                    margin-left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+            .cardBtn{
+                display: flex;
+            }
+        }
+    }
+    .productContainer{
+        padding: 10px;
+        .menu{
+            max-width: 70%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            ul{
+                padding: 35px 0 40px 0;
+                justify-content: start;
+                margin: 20px 0 0 12.5%;
+                order: 2;
+                overflow: hidden;
+                li{
+                    flex-shrink: 0;
+                }
+            }
+        }
+        .product{
+            justify-content: center;
+            padding-top: 0;
+            li{
+                margin: 24px;
+            }
+        }
+        .pageBtn{
+            justify-content: center;
+        }
+    }
+    .footer{
+        .bottomBar{
+            flex-direction: column;
+            justify-content: flex-start;
+            h3{
+                order: 1;
+            }
+            img{
+                width: 256px;
+                height: 42px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .navBar{
+        padding: 28px 0 28px 0;
+        .logo{
+            height: 24px;
+        }
+    }
+    .bodyInfo{
+        .workTogether{
+            h3{
+                font-size: 20px;
+                padding-bottom: 24px;
+            }
+            .WTcard{
+                padding-top: 48px;
+            }
+        }
+    }
+    .productContainer{
+        border-radius: 24px;
+        h2{
+            padding: 170px 42px 80px 42px;
+            font-size: 32px;
+        }
+        .menu{
+            max-width: 98%;
+            ul{
+                margin: 20px 0 0 3%;
+            }
+        }
+    }
+    .toStart{
+        h3{
+            max-width: 70%;
+            font-size: 32px;
+        }
+    }
+    .footer{
+        .bottomBar{
+            padding: 78px 16px 78px 16px;
+            h3{
+                font-size: 48px;
+                line-height: 1.5;
+            }
+        }
+        .wrapper{
+            flex-direction: column;
+            padding-left: 12px;
+            h4{
+                padding-bottom: 36px;
+            }
+        }
+    }
+}

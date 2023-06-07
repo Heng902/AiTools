@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+//顏色
+$B100: #020202;
+$B80: #525252;
+$B60: #919191;
+$B40: #D1D1D1;
+$B20: #F2F2F2;
+$B0: #FFFFFF;
+$primary: #F18724;
+$surface: #F2EFE7;
+//標準寬度
+$Width: 1296px;
+//字體大小
+.fzTiny{
+    font-size: 12px;
+}
+.fzSmall{
+    font-size: 14px;
+}
+.fzBody{
+    font-size: 16px;
+}
+.fzH06{
+    font-size: 20px;
+}
+.fzH05{
+    font-size: 24px;
+}
+.fzH04{
+    font-size: 28px;
+}
+.fzH03{
+    font-size: 32px;
+}
+.fzH02{
+    font-size: 40px;
+}
+.fzH01{
+    font-size: 48px;
+}
+.fzD03{
+    font-size: 80px;
+}
+.fzD02{
+    font-size: 120px;
+}
+.fzD01{
+    font-size: 160px;
+}
+//字體粗細
+.bold{
+    font-weight: 900;
+}
+.regular{
+    font-weight: 400;
+}
+//容器置中
+.m0A{
+    margin: 0 auto;
+}
+//FLEX
+.df{
+    display: flex;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $B100;
+    color: $B0;
+    font-family: 'Noto Sans TC';
+    line-height: 1.2;
+}
+a{
+    color: $B0;
+    text-decoration: none;
+    &:visited{
+        color: $B0;
+    }
+}
+
+.navBar{
+    padding: 20px 0 20px 0;
+    width: 92%;
+    border-bottom: 1px solid $B0;
+    justify-content: space-between;
+    .logo{
+        height: 40px;
+    }
+    .closeIcon{
+        display: block;
+        margin-right: 14px;
+    }
+}
+.footer{
+    max-width: $Width;
+    .bottomBar{
+        justify-content: space-between;
+        padding: 192px 0 192px 0;
+        border-bottom: 1px solid $B0;
+        img{
+            width: 244px;
+            height: 42px;
+        }
+    }
+    .wrapper{
+        margin: 36px 0 32px 0;
+        position: relative;
+        h4{
+            padding-right: 98px;
+        }
+        ul{
+            width: 254px;
+            justify-content: space-between;
+        }
+    }
+}
+
+//700
+@media (max-width: 700px) {
+    .navBar{
+        padding: 28px 0 28px 0;
+        .logo{
+            height: 24px;
+        }
+    }
+    .footer{
+        .wrapper{
+            flex-direction: column;
+            padding-left: 12px;
+            h4{
+                padding-bottom: 36px;
+            }
+        }
+    }
+}
